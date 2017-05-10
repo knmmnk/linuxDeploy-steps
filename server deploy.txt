@@ -1,0 +1,23 @@
+Steps Deploy the jar and war files 
+-----------------------------------
+1. username
+
+2. password
+-----------
+scottpa01@BHANTAS: cd pa_services                       -----------------> change the path pa_services
+
+ls ----   to know the list of files
+
+scottpa01@BHANTAS:~/pa_services$ : docker cp TestMicroServices.jar scott_pamicros:/usr/local/etc/pa_services   ------------> to move the jar file to the container
+
+ps -ef | grep java  --------- to know jar <pid> number 
+
+kill <pid>  --- to kill jar file with <pid> number
+
+
+
+-----------
+docker exec -it scott_pamicros bash   ------------> enters into the local container 
+ls ---- to find jars 
+-----------
+
