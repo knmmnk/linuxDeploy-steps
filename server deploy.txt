@@ -21,3 +21,6 @@ docker exec -it scott_pamicros bash   ------------> enters into the local contai
 ls ---- to find jars 
 -----------
 
+tail -n 100 CampaignManagement.log  --------- to read last 100 lines of log file
+
+grep "******** sendMail is called ***************" CampaignManagement.log         ------------- to search specific term in log file
