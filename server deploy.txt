@@ -8,11 +8,15 @@ stopsftpa01@BKANFKAS: cd pa_services                       -----------------> ch
 
 ls ----   to know the list of files
 
-stopsftpa01@BKANFKAS:~/pa_services$ : docker cp TestMicroServices.jar scott_pamicros:/usr/local/etc/pa_services   ------------> to move the jar file to the container
-
 ps -ef | grep java  --------- to know jar <pid> number 
 
 kill <pid>  --- to kill jar file with <pid> number
+
+
+stopsftpa01@BKANFKAS:~/pa_services$ : docker cp <jarFileName>.jar scott_pamicros:/usr/local/etc/pa_services   ------------> to move the jar file to the container
+
+
+java -jar <jarFileName>.jar > <jarFileName>.log -- to run new jar file
 
 
 
@@ -21,6 +25,6 @@ docker exec -it scott_pamicros bash   ------------> enters into the local contai
 ls ---- to find jars 
 -----------
 
-tail -n 100 CampaignManagement.log  --------- to read last 100 lines of log file
+tail -n 100 <jarFileName>.log  --------- to read last 100 lines of log file
 
-grep "******** sendMail is called ***************" CampaignManagement.log         ------------- to search specific term in log file
+grep "******** sendMail is called ***************" <jarFileName>.log         ------------- to search specific term in log file
